@@ -1,0 +1,19 @@
+#! /bin/sh
+
+if [ $# -lt 1 ]
+then
+  echo '1 argument (origin-image-path) is required.' 1>&2
+  exit 1
+fi
+
+ORIGIN=$1
+if [ ! -f ${ORIGIN} ]
+then
+  echo "${ORIGIN} dosen't exist." 1>&2
+  exit 2
+fi
+convert -resize 114x114!   ${ORIGIN} icon-114x114.png
+convert -resize 57x57!     ${ORIGIN} icon-57x57.png
+convert -resize 144x144!   ${ORIGIN} icon-144x144.png
+convert -resize 72x72!     ${ORIGIN} icon-72x72.png
+convert -resize 1024x1024! ${ORIGIN} icon-1024x1024.png
