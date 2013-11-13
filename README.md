@@ -1,5 +1,7 @@
 # iOS App Icon Generator
 
+Version 0.0.1
+
 ## Requirements
 
 * ImageMagick
